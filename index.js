@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    var n = 4;
+    var n = 0;
+    function func1(){
+        n = Math.floor(Math.random() * 18);
+    }
+    func1();
     var correctAnswers = {
         0: "2",
         1: "Not so bright petals",
@@ -24,11 +28,8 @@ $(document).ready(function() {
     var audio = new Audio('wrong.mp3'); // Initialize audio
     var originalBackgroundColor = $('body').css('background-color'); // Store original background color
 
-    function func1(){
-        n = Math.floor(Math.random() * 18);
-    }
+    
 
-    func1();
 
     // Function to handle answer clicks
     function handleAnswerClick(event) {
@@ -38,7 +39,9 @@ $(document).ready(function() {
             $('body').css('background-color', 'green'); // Change background color to green
             setTimeout(function() {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
-                location.reload(); // Reload the page after 2 seconds
+                func1();
+                func2();
+                // Reload the page after 2 seconds
             }, 2000);
         } else {
             audio.play(); // Play the wrong answer sound
@@ -53,6 +56,7 @@ $(document).ready(function() {
     $(".selfformedclass2, .selfformedclass3, .selfformedclass4, .selfformedclass5").click(handleAnswerClick);
     
     // The rest of the code remains the same
+    func2(){
     if (n == 0) {
         $(".selfformedclass1").text("Based on scent, flowers can be divided into how many categories?");
         $(".selfformedclass2").text("2");
@@ -161,5 +165,6 @@ $(document).ready(function() {
         $(".selfformedclass3").text("6 types");
         $(".selfformedclass4").text("2 types");
         $(".selfformedclass5").text("3 types");
+    }
     }
 });
