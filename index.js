@@ -26,7 +26,6 @@ $(document).ready(function() {
 
     function func1(){
         n = Math.floor(Math.random() * 21);
-        // Add any additional logic for func1 if needed
     }
 
     func1();
@@ -36,7 +35,11 @@ $(document).ready(function() {
         var selectedAnswer = $(event.target).text();
         var correctAnswer = correctAnswers[n];
         if (selectedAnswer === correctAnswer) {
-            func1(); // Call func1 to load a new question
+            $('body').css('background-color', 'green'); // Change background color to green
+            setTimeout(function() {
+                $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
+                location.reload(); // Reload the page after 2 seconds
+            }, 2000);
         } else {
             audio.play(); // Play the wrong answer sound
             $('body').css('background-color', 'red'); // Change background color to red
@@ -109,7 +112,6 @@ $(document).ready(function() {
         $(".selfformedclass2").text("Protection to seeds");
         $(".selfformedclass3").text("Flavour to seeds");
         $(".selfformedclass4").text("Flowers to seeds");
-       
         $(".selfformedclass5").text("Plants to seeds");
     } else if (n == 10) {
         $(".selfformedclass1").text("During pollination pollen moves from:");
