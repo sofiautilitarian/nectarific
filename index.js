@@ -4,6 +4,7 @@ $(document).ready(function() {
         n = Math.floor(Math.random() * 18);
     }
     func1();
+    func2();
     var correctAnswers = {
         0: "2",
         1: "Not so bright petals",
