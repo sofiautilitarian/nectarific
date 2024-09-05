@@ -1,31 +1,31 @@
 $(document).ready(function() {
     var n = 4;
     var correctAnswers = {
-        0: "5",
+        0: "2",
         1: "Not so bright petals",
         2: "Large quantities of lightweight pollen",
         3: "Large amounts of nectar are produced",
-        4: "Open, airy environments",
+        4: "no nectar",
         5: "The transfer of pollen from one flower to another",
         6: "Bees",
         7: "By transferring pollen from flower to flower",
         8: "Open, airy environments",
         9: "Protection to seeds",
         10: "Anther",
-        11: "seeds",
-        12: "bright, colourful petals",
-        13: "plant reproduction",
-        14: "pollinators",
-        15: "large nectar glands",
+        11: "Seeds",
+        12: "Bright, colourful petals",
+        13: "Plant reproduction",
+        14: "Pollinators",
+        15: "Large nectar glands",
         16: "Great smell",
-        17: "4 types"
+        17: "2 types"
     };
 
     var audio = new Audio('wrong.mp3'); // Initialize audio
     var originalBackgroundColor = $('body').css('background-color'); // Store original background color
 
     function func1(){
-        n = Math.floor(Math.random() * 21);
+        n = Math.floor(Math.random() * 18);
     }
 
     func1();
@@ -78,8 +78,8 @@ $(document).ready(function() {
         $(".selfformedclass4").text("Large amounts of nectar are produced");
         $(".selfformedclass5").text("Pollen grains are heavy and sticky");
     } else if (n == 4) {
-        $(".selfformedclass1").text("Wind pollination is most effective in:");
-        $(".selfformedclass2").text("Open, airy environments");
+        $(".selfformedclass1").text("Wind pollinated flowers have:");
+        $(".selfformedclass2").text("no nectar");
         $(".selfformedclass3").text("Dense forests");
         $(".selfformedclass4").text("Tropical rainforests");
         $(".selfformedclass5").text("Dark, shaded areas");
