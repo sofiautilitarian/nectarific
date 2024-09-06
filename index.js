@@ -30,8 +30,8 @@ $(document).ready(function () {
         15: "Large nectar glands",
         16: "Great smell",
         17: "2 types",
-        18: "",
-        19: ""
+        18: "Anther",
+        19: "same species"
     };
 
      // Initialize audio
