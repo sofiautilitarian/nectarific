@@ -2,7 +2,7 @@ $(document).ready(function () {
     var count = 0;
     var n = 0;
     function func1() {
-        n = Math.floor(Math.random() * 18);
+        n = Math.floor(Math.random() * 20);
     }
     function func3() {
         var x = Math.floor(Math.random() * 3) + 1;
@@ -29,11 +29,13 @@ $(document).ready(function () {
         14: "Pollinators",
         15: "Large nectar glands",
         16: "Great smell",
-        17: "2 types"
+        17: "2 types",
+        18: "",
+        19: ""
     };
 
-    var audio = new Audio('wrong.mp3'); // Initialize audio
-    var audio1 = new Audio('right.mp3');
+     // Initialize audio
+   
     var originalBackgroundColor = $('body').css('background-color'); // Store original background color
 
 
@@ -45,6 +47,7 @@ $(document).ready(function () {
         var correctAnswer = correctAnswers[n];
         if (selectedAnswer === correctAnswer) {
             $('body').css('background-color', 'green');
+            var audio1 = new Audio('right.mp3');
             audio1.play();
             count++; // Change background color to green
             $('.count').text("Your current score is "+count);
@@ -54,13 +57,15 @@ $(document).ready(function () {
                 func1();
                 func2(n);
                 // Reload the page after 2 seconds
-            }, 2000);
-        } else {
+            }, 1000);
+        } 
+        else {
+            var audio = new Audio('wrong.mp3');
             audio.play(); // Play the wrong answer sound
             $('body').css('background-color', 'red'); // Change background color to red
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
-            }, 2000);
+            }, 1000);
         }
     }
 
@@ -177,6 +182,18 @@ $(document).ready(function () {
             $(".selfformedclass3").text("6 types");
             $(".selfformedclass4").text("2 types");
             $(".selfformedclass5").text("3 types");
+        } else if (n == 18) {
+            $(".selfformedclass1").text("Pollen stays in: ");
+            $(".selfformedclass2").text("Anther");
+            $(".selfformedclass3").text("Sepal");
+            $(".selfformedclass4").text("Stigma");
+            $(".selfformedclass5").text("Sepal");
+        } else if (n == 19) {
+            $(".selfformedclass1").text("Pollination only happens in flowers belonging to the: ");
+            $(".selfformedclass2").text("ssame plant");
+            $(".selfformedclass3").text("same tree");
+            $(".selfformedclass4").text("same species");
+            $(".selfformedclass5").text("same parent");
         }
     }
 });
