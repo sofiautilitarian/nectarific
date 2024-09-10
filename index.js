@@ -1,12 +1,12 @@
 $(document).ready(function () {
     var count = 1;
-    var n = 28;
+    var n = 32;
     function func1() {
         if (n>0){
             n--;
         }
         else {
-            n = 27;
+            n = 32;
             count++;
         }
     }
@@ -38,14 +38,19 @@ $(document).ready(function () {
         17: "2 types",
         18: "Anther",
         19: "same species",
-        20: "By eating and excreting seeds",
-        21: "Ensuring seedlings are well-distributed",
-        22: "Winged or parachute-like seeds prone to wind blow",
-        23: "Carrying seeds and depositing in new locations",
-        24: "Seeds are dropped from a height and roll to a new location",
-        25: "Animals spread seeds through their waste, which fertilizes and helps seeds germinate",
-        26: "Small, lightweight seeds are often dispersed by wind, while large seeds are typically dispersed by animals or water",
-        27: "The seed coat softens and splits"
+        20: "apples",
+        21: "for proper growth",
+        22: "spongy covers",
+        23: "1300 years old",
+        24: "shrivels",
+        25: "for years",
+        26: "germination",
+        27: "water absorption",
+        28: "bean pods",
+        29: "sea pencils",
+        30: "seedlings",
+        31: "away from each other",
+        32: "small seeds and tasty fruit"
     };
 
      // Initialize audio
@@ -62,8 +67,7 @@ $(document).ready(function () {
         if (selectedAnswer === correctAnswer) {
             $('body').css('background-color', 'green');
             var audio1 = new Audio('right.mp3');
-            audio1.play();
-            count++; // Change background color to green
+            audio1.play(); // Change background color to green
             $('.count').text("Round "+count);
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
@@ -209,53 +213,83 @@ $(document).ready(function () {
             $(".selfformedclass4").text("same species");
             $(".selfformedclass5").text("same parent");
         } else if (n == 20) {
-            $(".selfformedclass1").text("How do animals contribute to seed dispersion?");
-            $(".selfformedclass2").text("By eating and excreting seeds");
-            $(".selfformedclass3").text("By carrying seeds on fur");
-            $(".selfformedclass4").text("By caching seeds in ground");
-            $(".selfformedclass5").text("By depositing seeds through saliva");
+            $(".selfformedclass1").text("Which fruit drops and rolls");
+            $(".selfformedclass2").text("beans");
+            $(".selfformedclass3").text("jackfruits");
+            $(".selfformedclass4").text("papayas");
+            $(".selfformedclass5").text("apples");
         } else if (n == 21) {
-            $(".selfformedclass1").text("Why is it important for plants to have enough space for seed dispersion?");
-            $(".selfformedclass2").text("To protect seeds");
-            $(".selfformedclass3").text("Ensuring seedlings are well-distributed");
-            $(".selfformedclass4").text("To attract insects");
-            $(".selfformedclass5").text("To make the seeds sticky");
+            $(".selfformedclass1").text("Why do plants need room for seed dispersal?");
+            $(".selfformedclass2").text("for proper growth");
+            $(".selfformedclass3").text("for early death");
+            $(".selfformedclass4").text("for pollination");
+            $(".selfformedclass5").text("for nectar glands");
         } else if (n == 22) {
-            $(".selfformedclass1").text("What do plants do to ensure wind disperses seeds effectively?");
-            $(".selfformedclass2").text("Seeds falling close to the parent plant.");
-            $(".selfformedclass3").text("Winged or parachute-like seeds prone to wind blow");
-            $(".selfformedclass4").text("Colorful seeds to attract insects.");
-            $(".selfformedclass5").text("Sticky seeds adhere to animal fur");
+            $(".selfformedclass1").text("Fruits that float have");
+            $(".selfformedclass2").text("soft covers");
+            $(".selfformedclass3").text("moist covers");
+            $(".selfformedclass4").text("red covers");
+            $(".selfformedclass5").text("spongy covers");
         } else if (n == 23) {
-            $(".selfformedclass1").text("How does water act as a medium for seed dispersion?");
-            $(".selfformedclass2").text("Carrying seeds and depositing in new locations");
-            $(".selfformedclass3").text("Seeds are dispersed through waterlogged soil");
-            $(".selfformedclass4").text("Seeds float on the surface of water");
-            $(".selfformedclass5").text("Seeds are trapped in mud and carried to new areas");
+            $(".selfformedclass1").text("The oldest germinating seed was ___ ");
+            $(".selfformedclass2").text("1500 years old");
+            $(".selfformedclass3").text("900 years old");
+            $(".selfformedclass4").text("50 years old");
+            $(".selfformedclass5").text("1300 years old");
         } else if (n == 24) {
-            $(".selfformedclass1").text("How does water act as a medium for seed dispersion?");
-            $(".selfformedclass2").text("Seeds fall and roll away from the parent plant due to gravity");
-            $(".selfformedclass3").text("Seeds are expelled by the plant and roll away on the ground");
-            $(".selfformedclass4").text("Seeds are dropped from a height and roll to a new location");
-            $(".selfformedclass5").text("Seeds are thrown by the plant and roll through the soil");
+            $(".selfformedclass1").text("After germination, the seed _____");
+            $(".selfformedclass2").text("shrivels");
+            $(".selfformedclass3").text("enlarges");
+            $(".selfformedclass4").text("dies");
+            $(".selfformedclass5").text("ripes");
         } else if (n == 25) {
-            $(".selfformedclass1").text("In what ways can animal behaviors influence the dispersion and germination of seeds?");
-            $(".selfformedclass2").text("Animals eat seeds and transport them to new locations where they may germinate");
-            $(".selfformedclass3").text("Animals cache seeds in various locations, which can result in germination if the seeds are not retrieved");
-            $(".selfformedclass4").text("Animals chew seeds, breaking down their hard coats and facilitating germination");
-            $(".selfformedclass5").text("Animals spread seeds through their waste, which fertilizes and helps seeds germinate");
+            $(".selfformedclass1").text("Seeds can live without germinating: ");
+            $(".selfformedclass2").text("for days only");
+            $(".selfformedclass3").text("for hours only");
+            $(".selfformedclass4").text("for seconds only");
+            $(".selfformedclass5").text("for years");
         } else if (n == 26) {
-            $(".selfformedclass1").text("How does seed size and shape affect a plant's method of seed dispersion");
-            $(".selfformedclass2").text("Small, lightweight seeds are often dispersed by wind, while large seeds are typically dispersed by animals or water");
-            $(".selfformedclass3").text("Heavy, large seeds are dispersed by water, while small seeds are dispersed by animals");
-            $(".selfformedclass4").text("Seeds with a hard coating are dispersed by wind, while soft seeds are dispersed by water");
-            $(".selfformedclass5").text("Small seeds are dispersed by animals, while large seeds are dispersed by wind");
+            $(".selfformedclass1").text("When a seed starts growing, we call it : ");
+            $(".selfformedclass2").text("seedling");
+            $(".selfformedclass3").text("pollination");
+            $(".selfformedclass4").text("seed dispersal");
+            $(".selfformedclass5").text("germination");
         } else if (n == 27) {
             $(".selfformedclass1").text("What is the first stage of seed germination?");
-            $(".selfformedclass2").text("The seed coat softens and splits");
-            $(".selfformedclass3").text("The first root begins to grow downward");
-            $(".selfformedclass4").text("The seed absorbs sunlight");
-            $(".selfformedclass5").text("The seed dies");
+            $(".selfformedclass2").text("water absorption");
+            $(".selfformedclass3").text("seed death");
+            $(".selfformedclass4").text("plantation");
+            $(".selfformedclass5").text("seed rebirth");
+        } else if (n == 28) {
+            $(".selfformedclass1").text("Which fruit explodes in hot weather?");
+            $(".selfformedclass2").text("apples");
+            $(".selfformedclass3").text("peanuts");
+            $(".selfformedclass4").text("bananas");
+            $(".selfformedclass5").text("bean pods");
+        } else if (n == 29) {
+            $(".selfformedclass1").text("seeds of mangrove trees are called");
+            $(".selfformedclass2").text("motorolas");
+            $(".selfformedclass3").text("see urchins");
+            $(".selfformedclass4").text("vegetations");
+            $(".selfformedclass5").text("sea pencils");
+        } else if (n == 30) {
+            $(".selfformedclass1").text("young plants from seeds are");
+            $(".selfformedclass2").text("urchins");
+            $(".selfformedclass3").text("sea pencils");
+            $(".selfformedclass4").text("seedlings");
+            $(".selfformedclass5").text("seed tubes");
+        } else if (n == 31) {
+            $(".selfformedclass1").text("Plants' seeds spread");
+            $(".selfformedclass2").text("closely");
+            $(".selfformedclass3").text("away from each other");
+            $(".selfformedclass4").text("tightly");
+            $(".selfformedclass5").text("densely");
+        } else if (n == 32) {
+            $(".selfformedclass1").text("Fruits of seeds dispered by animals have");
+            $(".selfformedclass2").text("tasty fruit and big seeds");
+            $(".selfformedclass3").text("small seeds and tasty fruit");
+            $(".selfformedclass4").text("bitter fruits and big seeds");
+            $(".selfformedclass5").text("dead seeds and dead fruits");
         }
     }
 });
