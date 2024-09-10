@@ -1,8 +1,13 @@
 $(document).ready(function () {
     var count = 0;
-    var n = 0;
+    var n = 28;
     function func1() {
-        n = Math.floor(Math.random() * 28);
+        if (n>=0){
+            n--;
+        }
+        else{
+            n = 28;
+        }
     }
     function func3() {
         var x = Math.floor(Math.random() * 3) + 1;
