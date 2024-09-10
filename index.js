@@ -6,7 +6,7 @@ $(document).ready(function () {
             n--;
         }
         else {
-            location.reload();
+            n = 27;
         }
     }
     function func3() {
