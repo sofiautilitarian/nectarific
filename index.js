@@ -5,7 +5,7 @@ $(document).ready(function () {
         if (n>0){
             n--;
         }
-        else{
+        else if (n==0){
             n = 28;
         }
     }
