@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var count = 1;
-    var n = 32;
+    var n = 33;
     function func1() {
         if (n>0){
             n--;
