@@ -2,7 +2,7 @@ $(document).ready(function () {
     var count = 0;
     var n = 0;
     function func1() {
-        n = Math.floor(Math.random() * 20);
+        n = Math.floor(Math.random() * 28);
     }
     function func3() {
         var x = Math.floor(Math.random() * 3) + 1;
@@ -31,7 +31,15 @@ $(document).ready(function () {
         16: "Great smell",
         17: "2 types",
         18: "Anther",
-        19: "same species"
+        19: "same species",
+        20: "By eating and excreting seeds",
+        21: "Ensuring seedlings are well-distributed",
+        22: "Winged or parachute-like seeds prone to wind blow",
+        23: "Carrying seeds and depositing in new locations",
+        24: "Seeds are dropped from a height and roll to a new location",
+        25: "Animals spread seeds through their waste, which fertilizes and helps seeds germinate",
+        26: "Small, lightweight seeds are often dispersed by wind, while large seeds are typically dispersed by animals or water",
+        27: "The seed coat softens and splits"
     };
 
      // Initialize audio
@@ -190,10 +198,58 @@ $(document).ready(function () {
             $(".selfformedclass5").text("Sepal");
         } else if (n == 19) {
             $(".selfformedclass1").text("Pollination only happens in flowers belonging to the: ");
-            $(".selfformedclass2").text("ssame plant");
+            $(".selfformedclass2").text("same plant");
             $(".selfformedclass3").text("same tree");
             $(".selfformedclass4").text("same species");
             $(".selfformedclass5").text("same parent");
+        } else if (n == 20) {
+            $(".selfformedclass1").text("How do animals contribute to seed dispersion?");
+            $(".selfformedclass2").text("By eating and excreting seeds");
+            $(".selfformedclass3").text("By carrying seeds on fur");
+            $(".selfformedclass4").text("By caching seeds in ground");
+            $(".selfformedclass5").text("By depositing seeds through saliva");
+        } else if (n == 21) {
+            $(".selfformedclass1").text("Why is it important for plants to have enough space for seed dispersion?");
+            $(".selfformedclass2").text("To protect seeds");
+            $(".selfformedclass3").text("Ensuring seedlings are well-distributed");
+            $(".selfformedclass4").text("To attract insects");
+            $(".selfformedclass5").text("To make the seeds sticky");
+        } else if (n == 22) {
+            $(".selfformedclass1").text("What do plants do to ensure wind disperses seeds effectively?");
+            $(".selfformedclass2").text("Seeds falling close to the parent plant.");
+            $(".selfformedclass3").text("Winged or parachute-like seeds prone to wind blow");
+            $(".selfformedclass4").text("Colorful seeds to attract insects.");
+            $(".selfformedclass5").text("Sticky seeds adhere to animal fur");
+        } else if (n == 23) {
+            $(".selfformedclass1").text("How does water act as a medium for seed dispersion?");
+            $(".selfformedclass2").text("Carrying seeds and depositing in new locations");
+            $(".selfformedclass3").text("Seeds are dispersed through waterlogged soil");
+            $(".selfformedclass4").text("Seeds float on the surface of water");
+            $(".selfformedclass5").text("Seeds are trapped in mud and carried to new areas");
+        } else if (n == 24) {
+            $(".selfformedclass1").text("How does water act as a medium for seed dispersion?");
+            $(".selfformedclass2").text("Seeds fall and roll away from the parent plant due to gravity");
+            $(".selfformedclass3").text("Seeds are expelled by the plant and roll away on the ground");
+            $(".selfformedclass4").text("Seeds are dropped from a height and roll to a new location");
+            $(".selfformedclass5").text("Seeds are thrown by the plant and roll through the soil");
+        } else if (n == 25) {
+            $(".selfformedclass1").text("In what ways can animal behaviors influence the dispersion and germination of seeds?");
+            $(".selfformedclass2").text("Animals eat seeds and transport them to new locations where they may germinate");
+            $(".selfformedclass3").text("Animals cache seeds in various locations, which can result in germination if the seeds are not retrieved");
+            $(".selfformedclass4").text("Animals chew seeds, breaking down their hard coats and facilitating germination");
+            $(".selfformedclass5").text("Animals spread seeds through their waste, which fertilizes and helps seeds germinate");
+        } else if (n == 26) {
+            $(".selfformedclass1").text("How does seed size and shape affect a plant's method of seed dispersion");
+            $(".selfformedclass2").text("Small, lightweight seeds are often dispersed by wind, while large seeds are typically dispersed by animals or water");
+            $(".selfformedclass3").text("Heavy, large seeds are dispersed by water, while small seeds are dispersed by animals");
+            $(".selfformedclass4").text("Seeds with a hard coating are dispersed by wind, while soft seeds are dispersed by water");
+            $(".selfformedclass5").text("Small seeds are dispersed by animals, while large seeds are dispersed by wind");
+        } else if (n == 27) {
+            $(".selfformedclass1").text("What is the first stage of seed germination?");
+            $(".selfformedclass2").text("The seed coat softens and splits");
+            $(".selfformedclass3").text("The first root begins to grow downward");
+            $(".selfformedclass4").text("The seed absorbs sunlight");
+            $(".selfformedclass5").text("The seed dies");
         }
     }
 });
