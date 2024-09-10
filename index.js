@@ -6,7 +6,8 @@ $(document).ready(function () {
             n--;
         }
         else {
-            n = 32;
+            n = 33;
+            $('.count').text = 'You have completed round '+count+ "\nNow you are in round "+(count+1);
             count++;
         }
     }
@@ -50,7 +51,8 @@ $(document).ready(function () {
         29: "sea pencils",
         30: "seedlings",
         31: "away from each other",
-        32: "small seeds and tasty fruit"
+        32: "small seeds and tasty fruit",
+        33: "roots grows into soil"
     };
 
      // Initialize audio
@@ -290,6 +292,12 @@ $(document).ready(function () {
             $(".selfformedclass3").text("small seeds and tasty fruit");
             $(".selfformedclass4").text("bitter fruits and big seeds");
             $(".selfformedclass5").text("dead seeds and dead fruits");
+        } else if (n == 33) {
+            $(".selfformedclass1").text("In the third step of seed germination");
+            $(".selfformedclass2").text("shoot grows higher above");
+            $(".selfformedclass3").text("first root and leaves grow");
+            $(".selfformedclass4").text("root grows into soil");
+            $(".selfformedclass5").text("seed coat splits");
         }
     }
 });
