@@ -2,7 +2,7 @@ $(document).ready(function () {
     var count = 0;
     var n = 28;
     function func1() {
-        if (n>=0){
+        if (n>0){
             n--;
         }
         else{
