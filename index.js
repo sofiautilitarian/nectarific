@@ -5,8 +5,9 @@ $(document).ready(function () {
         if (n>0){
             n--;
         }
-        else if (n==0){
+        else {
             n = 28;
+            func2(n);
         }
     }
     function func3() {
