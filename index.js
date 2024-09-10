@@ -74,7 +74,7 @@ $(document).ready(function () {
                 $('.count').text("Round "+count);
             }
             else{
-                $('.count').text = 'You have completed round '+count+ "\nNow you are in round "+(count+1);
+                $('.count').text = 'You have completed round '+count-1+ "\nNow you are in round "+(count);
             }
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
