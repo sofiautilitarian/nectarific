@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var count = 0;
+    var count = 1;
     var n = 28;
     function func1() {
         if (n>0){
@@ -7,6 +7,7 @@ $(document).ready(function () {
         }
         else {
             n = 27;
+            count++;
         }
     }
     function func3() {
@@ -63,7 +64,7 @@ $(document).ready(function () {
             var audio1 = new Audio('right.mp3');
             audio1.play();
             count++; // Change background color to green
-            $('.count').text("Your current score is "+count);
+            $('.count').text("Round "+count);
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
                 func3();
