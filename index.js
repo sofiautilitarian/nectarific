@@ -1,12 +1,12 @@
 $(document).ready(function () {
     var count = 1;
-    var n = 33;
+    var n = 34;
     function func1() {
         if (n>0){
             n--;
         }
         else {
-            n = 33;
+            n = 34;
             $('.count').text = 'You have completed round '+count+ "\nNow you are in round "+(count+1);
             count++;
         }
@@ -52,7 +52,8 @@ $(document).ready(function () {
         30: "seedlings",
         31: "away from each other",
         32: "small seeds and tasty fruit",
-        33: "root grows into soil"
+        33: "root grows into soil",
+        34: "ripe"
     };
 
      // Initialize audio
@@ -70,7 +71,7 @@ $(document).ready(function () {
             $('body').css('background-color', 'green');
             var audio1 = new Audio('right.mp3');
             audio1.play(); // Change background color to green
-            if (count<=1){
+            if (count==1){
                 $('.count').text("Round "+count);
             }
             setTimeout(function () {
@@ -300,6 +301,12 @@ $(document).ready(function () {
             $(".selfformedclass3").text("first root and leaves grow");
             $(".selfformedclass4").text("root grows into soil");
             $(".selfformedclass5").text("seed coat splits");
+        } else if (n == 34) {
+            $(".selfformedclass1").text("drop and roll happens when fruit is:");
+            $(".selfformedclass2").text("dead");
+            $(".selfformedclass3").text("young");
+            $(".selfformedclass4").text("germinating");
+            $(".selfformedclass5").text("ripe");
         }
     }
 });
