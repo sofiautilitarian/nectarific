@@ -52,7 +52,7 @@ $(document).ready(function () {
         30: "seedlings",
         31: "away from each other",
         32: "small seeds and tasty fruit",
-        33: "roots grows into soil"
+        33: "root grows into soil"
     };
 
      // Initialize audio
@@ -70,7 +70,9 @@ $(document).ready(function () {
             $('body').css('background-color', 'green');
             var audio1 = new Audio('right.mp3');
             audio1.play(); // Change background color to green
-            $('.count').text("Round "+count);
+            if (count<=1){
+                $('.count').text("Round "+count);
+            }
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
                 func3();
