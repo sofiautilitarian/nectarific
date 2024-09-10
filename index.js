@@ -7,7 +7,6 @@ $(document).ready(function () {
         }
         else {
             n = 34;
-            $('.count').text = 'You have completed round '+count+ "\nNow you are in round "+(count+1);
             count++;
         }
     }
@@ -73,6 +72,9 @@ $(document).ready(function () {
             audio1.play(); // Change background color to green
             if (count==1){
                 $('.count').text("Round "+count);
+            }
+            else{
+                $('.count').text = 'You have completed round '+count+ "\nNow you are in round "+(count+1);
             }
             setTimeout(function () {
                 $('body').css('background-color', originalBackgroundColor); // Revert background color after 2 seconds
